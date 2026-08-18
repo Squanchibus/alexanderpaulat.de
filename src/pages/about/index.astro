@@ -1,0 +1,151 @@
+---
+import { Button, Collapse, Spoiler, Timeline } from 'astro-pure/user'
+import comptiaImage from '@/assets/tools/comptia_pentest.jpg'
+import pnptImage from '@/assets/tools/pnpt.png'
+import pwppImage from '@/assets/tools/pwpp.png'
+import tcmImage from '@/assets/tools/tcm_security.png'
+import PageLayout from '@/layouts/CommonPage.astro'
+import Substats from '@/components/about/Substats.astro'
+import ToolSection from '@/components/about/ToolSection.astro'
+
+const headings = [
+  { depth: 2, slug: 'journey', text: 'My Journey' },
+  { depth: 2, slug: 'certifications', text: 'Certifications' },
+  { depth: 2, slug: 'social', text: 'Social' }
+]
+---
+
+<PageLayout title='About' {headings}>
+  <p>Penetration Tester / Developer / Researcher</p>
+  <p>
+    IT geek with a broad interest in information technology and a particular focus on cybersecurity.
+    With a solid background in software development, I transitioned into the ever-evolving field of cybersecurity, where I enjoy solving problems, learning new things, and exploring how systems can be broken... and secured.
+    Penetration testing, risk assessments, OSINT, or covert operations... you name it, I've probably done it.
+  </p>
+
+  {/* jouney */}
+  <h2 id='journey'>My Journey</h2>
+  <p>Work experience:</p>
+  <Timeline
+    events={[
+      {
+        date: '05/2025 - Present',
+        content: 'Started my independet security research'
+      },
+      {
+        date: '05/2024 - 04/2025',
+        content: 'Started my penetration testing company'
+      },
+      {
+        date: '01/2022 - 04/2024',
+        content: 'Joined <a href="https://think-ics.com/" target="_blank">ICS</a> as a Security Engineer / Penetration Tester'
+      },
+      {
+        date: '07/2015 - 12/2021',
+        content: 'Joined <a href="https://pdv-software.de" target="_blank">pdv-software</a> as a Software Delevoper'
+      }
+    ]}
+  />
+  <p>Education:</p>
+  <Timeline
+    events={[
+      {
+        date: '08/2012 - 06/2015',
+        content: 'Trained as an IT Specialist for Application Development'
+      },
+      {
+        date: '08/2010 - 07/2012',
+        content: 'Trained as a Business Information Systems Assistant'
+      }
+    ]}
+  />
+
+  <h2 id='certifications'>Certifications</h2>
+  <ToolSection
+    class='mb-5'
+    title='Cyber Security'
+    tools={[
+      {
+        name: 'Practical Web Pentest Professional (PWPP)',
+        description: 'TCM Security',
+        href: 'https://certified.tcm-sec.com/74478f26-3050-4590-b2a9-a8087bc2e1ef',
+        icon: pwppImage
+      },
+      {
+        name: 'Practical Network Penetration Tester (PNPT)',
+        description: 'TCM Security',
+        href: 'https://certified.tcm-sec.com/74478f26-3050-4590-b2a9-a8087bc2e1ef',
+        icon: pnptImage
+      },
+      {
+        name: 'CompTIA PenTest+',
+        description: 'CompTIA',
+        href: 'https://www.credly.com/badges/fda4377c-4803-4464-a03e-b6165031d587',
+        icon: comptiaImage
+      }
+    ]}
+  />
+  <ToolSection
+    class='mb-5'
+    title='Microsoft'
+    tools={[
+      {
+        name: 'Azure Fundamentals',
+        description: '',
+        href: 'https://learn.microsoft.com/de-de/users/alexanderpaulat-0818/credentials/3f9ff4c052079174',
+        icon: import('@/assets/tools/microsoft-learn.svg?raw')
+      },
+      {
+        name: 'Azure Data Fundamentals',
+        description: '',
+        href: 'https://learn.microsoft.com/de-de/users/alexanderpaulat-0818/credentials/2000cacc65761eaa',
+        icon: import('@/assets/tools/microsoft-learn.svg?raw')
+      },
+      {
+        name: 'Azure AI Fundamentals',
+        description: '',
+        href: 'https://learn.microsoft.com/de-de/users/alexanderpaulat-0818/credentials/13a146eb70b85b75',
+        icon: import('@/assets/tools/microsoft-learn.svg?raw')
+      },
+      {
+        name: 'Security, Compliance, and Identity Fundamentals',
+        description: '',
+        href: 'https://learn.microsoft.com/de-de/users/alexanderpaulat-0818/credentials/86713594d9b3d326',
+        icon: import('@/assets/tools/microsoft-learn.svg?raw')
+      },
+      {
+        name: 'Microsoft 365 Certified: Fundamentals',
+        description: '',
+        href: 'https://learn.microsoft.com/de-de/users/alexanderpaulat-0818/credentials/7a573c74daaf80ee',
+        icon: import('@/assets/tools/microsoft-learn.svg?raw')
+      }
+    ]}
+  />
+
+  {/* social */}
+  <h2 id='social'>Socials</h2>
+  <ToolSection
+    class='mb-5'
+    title='Cyber Security'
+    tools={[
+      {
+        name: 'GitHub',
+        description: 'Squanchibus',
+        href: 'https://github.com/squanchibus',
+        icon: import('@/assets/tools/github.svg?raw')
+      },
+      {
+        name: 'LinkedIn',
+        description: 'alexanderpaulat',
+        href: 'https://www.linkedin.com/in/alexanderpaulat/',
+        icon: import('@/assets/tools/linkedin.svg?raw')
+      },
+      {
+        name: 'Email',
+        description: 'paulat.alexander@gmail.com',
+        href: 'mailto:paulat.alexander@gmail.com',
+        icon: import('@/assets/tools/gmail.svg?raw')
+      }
+    ]}
+  />
+</PageLayout>
