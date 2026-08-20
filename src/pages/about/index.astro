@@ -9,7 +9,7 @@ import ToolSection from '@/components/about/ToolSection.astro'
 const headings = [
   { depth: 2, slug: 'journey', text: 'My Journey' },
   { depth: 2, slug: 'certifications', text: 'Certifications' },
-  { depth: 2, slug: 'social', text: 'Social' }
+  { depth: 2, slug: 'profiles', text: 'My Profiles' }
 ]
 ---
 
@@ -91,46 +91,52 @@ const headings = [
         name: 'Azure Fundamentals',
         description: '',
         href: 'https://learn.microsoft.com/de-de/users/alexanderpaulat-0818/credentials/3f9ff4c052079174',
-        icon: import('@/assets/tools/microsoft-learn.svg?raw')
+        icon: import('@/assets/tools/microsoft-color.svg?raw')
       },
       {
         name: 'Azure Data Fundamentals',
         description: '',
         href: 'https://learn.microsoft.com/de-de/users/alexanderpaulat-0818/credentials/2000cacc65761eaa',
-        icon: import('@/assets/tools/microsoft-learn.svg?raw')
+        icon: import('@/assets/tools/microsoft-color.svg?raw')
       },
       {
         name: 'Azure AI Fundamentals',
         description: '',
         href: 'https://learn.microsoft.com/de-de/users/alexanderpaulat-0818/credentials/13a146eb70b85b75',
-        icon: import('@/assets/tools/microsoft-learn.svg?raw')
+        icon: import('@/assets/tools/microsoft-color.svg?raw')
       },
       {
         name: 'Security, Compliance, and Identity Fundamentals',
         description: '',
         href: 'https://learn.microsoft.com/de-de/users/alexanderpaulat-0818/credentials/86713594d9b3d326',
-        icon: import('@/assets/tools/microsoft-learn.svg?raw')
+        icon: import('@/assets/tools/microsoft-color.svg?raw')
       },
       {
         name: 'Microsoft 365 Certified: Fundamentals',
         description: '',
         href: 'https://learn.microsoft.com/de-de/users/alexanderpaulat-0818/credentials/7a573c74daaf80ee',
-        icon: import('@/assets/tools/microsoft-learn.svg?raw')
+        icon: import('@/assets/tools/microsoft-color.svg?raw')
       }
     ]}
   />
 
   {/* social */}
-  <h2 id='social'>Socials</h2>
+  <h2 id='profiles'>My profiles</h2>
   <ToolSection
     class='mb-5'
-    title='Cyber Security'
+    title=''
     tools={[
       {
         name: 'GitHub',
         description: 'Squanchibus',
         href: 'https://github.com/squanchibus',
-        icon: import('@/assets/tools/github.svg?raw')
+        icon: import('@/assets/tools/github-light.svg?raw')
+      },
+      {
+        name: 'TryHackMe',
+        description: 'MondDrohne',
+        href: 'https://tryhackme.com/p/MondDrohne',
+        icon: import('@/assets/tools/tryhackme.svg?raw')
       },
       {
         name: 'LinkedIn',

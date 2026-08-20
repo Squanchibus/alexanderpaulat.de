@@ -64,12 +64,6 @@ export const theme: ThemeUserConfig = {
         title: 'Privacy Policy',
         link: '/privacy',
         pos: 2 // position set to 2 will be appended to copyright line
-      },
-      // Impressum link
-      {
-        title: 'Imprint',
-        link: '/imprint',
-        pos: 2 // position set to 2 will be appended to copyright line
       }
     ],
     /** Enable displaying a “Astro & Pure theme powered” link in your site’s footer. */
