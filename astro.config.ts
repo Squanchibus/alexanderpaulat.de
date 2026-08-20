@@ -30,11 +30,11 @@ export default defineConfig({
   // base: '/astro-pure/',
   trailingSlash: 'never',
   // root: './my-project-directory',
-  server: { host: true },
+  //server: { host: true },
   // https://docs.astro.build/en/guides/prefetch/
   prefetch: {
     // prefetchAll: true,
-    defaultStrategy: 'viewport'
+    //defaultStrategy: 'viewport'
   },
 
   // [Adapter]
