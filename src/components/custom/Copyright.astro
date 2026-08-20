@@ -12,23 +12,10 @@ interface Props<T extends CollectionKey> {
 }
 
 const {
-  data: { heroImage, title, publishDate },
+  data: { title, publishDate },
   class: className
 } = Astro.props
 
-const image = typeof heroImage?.src === 'string' ? heroImage?.src : (heroImage?.src?.src ?? '')
-
-const shares = {
-  /*weibo: {
-    link: `http://service.weibo.com/share/share.php?url=${Astro.url}&title=${title}&pic=${image}`
-  },
-  x: {
-    link: `https://x.com/intent/tweet?text='${title}'&url='${Astro.url}'&via='${config.author}'`
-  },
-  bluesky: {
-    link: `https://bsky.app/intent/compose?text=${title}%0A${Astro.url}`
-  }*/
-} as const
 ---
 
 <div
@@ -85,30 +72,9 @@ const shares = {
       >
         <Icon class='size-5' name='link' />
       </button>
-      {
-        config.content.share.map((share) => (
-          <a
-            href={shares[share].link}
-            target='_blank'
-            id={`share-${share}`}
-            aria-label={`Share to ${share}`}
-            class='group rounded-full bg-muted p-1 text-muted-foreground transition-colors hover:text-primary sm:p-1.5'
-          >
-            <Icon class='size-5' name={share} />
-          </a>
-        ))
-      }
     </div>
   </div>
 </div>
-
-<style>
-  #qrcode-container.expanded {
-    max-height: 11rem;
-    transform: translateY(6px);
-    opacity: 100;
-  }
-</style>
 
 <script>
   import { showToast } from 'astro-pure/utils'
@@ -120,9 +86,4 @@ const shares = {
     // Show toast
     showToast({ message: 'Link copied!' })
   })
-
-  // QRCode
-  const getQRCode = document.getElementById('get-qrcode')
-  const qrcodeContainer = document.getElementById('qrcode-container')
-  getQRCode?.addEventListener('click', () => qrcodeContainer?.classList.toggle('expanded'))
 </script>
